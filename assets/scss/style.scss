@@ -400,19 +400,12 @@ footer {
                 padding: 0;
             }
         }
-
         .containerflex {
-            overflow: hidden;
-            display: flex;
-            margin-bottom: 30px;
-            .placeimg1, 
-            .maps1 { 
-                flex: 1;
-                height: 100%;
-                margin: auto;
+            display: block;
+            .row-eq-height {
             }
-            img { display: block; }
         }
+        
     }
     .stockholm {
         .containerflex1 {

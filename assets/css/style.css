@@ -520,23 +520,8 @@ footer img {
   }
   .london .containerflex,
 .vancouver .containerflex {
-    overflow: hidden;
-    display: flex;
-    margin-bottom: 30px;
-  }
-  .london .containerflex .placeimg1,
-.london .containerflex .maps1,
-.vancouver .containerflex .placeimg1,
-.vancouver .containerflex .maps1 {
-    flex: 1;
-    height: 100%;
-    margin: auto;
-  }
-  .london .containerflex img,
-.vancouver .containerflex img {
     display: block;
   }
-
   .stockholm .containerflex1 {
     overflow: hidden;
     display: flex;
