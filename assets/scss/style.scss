@@ -1,0 +1,454 @@
+@charset "UTF-8";
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import "mixins";
+@import "variables";
+
+/* ----- GENERAL ----- */
+body { 
+    background-color: $second;
+    margin: 0auto;
+    font: 400 100%/1 Oswald, Helvetica, sans-serif; 
+}
+.nopadding {
+    padding: 0 !important;
+}
+main {
+    h1 {    
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 30px;
+        color: $main;
+    }
+    p {
+        font-size: .7em;
+        text-align: right;
+        padding-right: 10px;
+        padding-left: 10px;
+        line-height: 1em;
+        color: $main;
+    }
+}
+
+/* ----- HEADER ----- */
+header {
+    .index {
+    height: 100vh;
+    background: url(/assets/img/backone.jpeg) center/cover fixed;
+    background-repeat: no-repeat;
+    }   
+    .navbar-light { background-color: green;}
+    .navbar {
+        background-color: $main;
+        .navbar-toggler { background-color: $second;}
+        .nav-item {
+            text-align: right;
+            .nav-link {
+                color: $second;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1.4em;
+                &:hover {
+                    text-decoration: none;
+                    color: $hover;
+                }
+            }
+        }
+    }
+    .navbar-brand img { 
+        height: 40px;
+        padding-top: 10px;
+    }
+}
+
+/* ----- HOMEPAGE ----- */
+.peter img {
+    width: 100%;
+    padding: 0;
+}
+
+.readmore p {
+    text-align: center;
+    color: $main;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: transform .2s ease-in-out;
+    cursor: pointer;
+    &::after {
+        @include line;
+        margin-top: 10px;
+        background-color: $main;
+    }
+    &::before {
+        @include line;
+        margin-bottom: 10px;
+        background-color: $main;
+    }
+    &:hover { transform: scale(1.1);}
+}
+
+.menu {
+    background-color: $main;
+    h1, p {color: $second;}
+    img { width: 100%; }
+    p { padding-bottom: 10px;}
+    section { position: relative;}
+}
+
+.fullmenu p {
+    position: absolute;
+    bottom: 15px;
+    left: 40%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: transform .2s ease-in-out;
+    &::after {
+        @include line;
+        margin-top: 10px;
+        background-color: $second;
+    }
+    &::before {
+        @include line;
+        margin-bottom: 10px;
+        background-color: $second;
+    }
+    &:hover { transform: scale(1.1);}
+}
+
+.card {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    transition: transform .2s ease-in-out;
+    .card-body {
+        text-align: right;
+        h5 {
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: right;
+            color: $main;
+        }
+    }
+    &:hover { transform: scale(1.1);}
+    &:last-child { margin-bottom: 30px; }
+}
+
+/* ----- MENU ----- */
+.menupage {
+    padding: 10px;
+    h2 {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        padding-top: 30px;
+    }
+    article { 
+        width: 100%;
+        margin-top: 30px;
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            .menuitem p{ text-align: left;}
+            .price p { text-align: right;}
+            li p {
+                text-transform: uppercase;
+                line-height: 3em;
+            }
+        }
+    }
+
+    .border1, 
+    .border2 { 
+        border: 1px solid $main; 
+        padding: 5px;
+    }
+    img { 
+        width: 100%;
+        padding: inherit;
+    }
+}
+
+/* ----- GALLERY ----- */
+.pagination { 
+    margin: 5px;
+    height: 400px; 
+    background-color: $main;
+}
+
+/* ----- OUR RESTAURANTS ----- */
+.title {
+    margin-bottom: 30px;
+    ul {
+        text-align: right; 
+        margin-right: 5px;
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $main;
+            font-weight: 700;
+            &:hover { color: $hover; }
+        }
+    }
+}
+
+.london,
+.vancouver { 
+    @include items; 
+    .containerflex { display: none;}
+}
+
+.stockholm {
+    @include items;
+    border: none;
+    background-color: inherit;
+    .containerflex1 { display: none;}
+    h2 {
+        margin-top: 30px;
+        color: $main;
+        text-align: left;
+    }
+    p { 
+        color: $main;
+        text-align: left;
+    }
+}
+
+/* ----- CONTACT ----- */
+form {
+    .form-group { 
+        color: $main;
+        font-size: .7em;
+    }
+    .btn {
+        text-transform: uppercase;
+        color: $main;
+        font-weight: 700;
+        background-color: $second;
+        border: none;
+        margin: auto;
+        margin-bottom: 30px;
+        transition: transform .2s ease-in-out;
+        &::after {
+            @include line;
+            background-color: $main;
+        }
+        &::before {
+            @include line;
+            background-color: $main;
+        }
+        &:hover { 
+            background-color: $second;
+            color: $main;
+            border: none;
+            transform: scale(1.1);
+        }
+    }
+}
+.imgnext img {
+    display: none;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    background-color: $main;    
+    text-align: center;
+    color: $second;
+    p { font-size: .7em;}
+    ul {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+            a { 
+                font-size: 1.5em;
+                text-decoration: none;
+                padding: 10px;
+                color: $second;
+                &:hover { color: $hover; }
+        }
+    }
+    a { 
+        text-transform: uppercase;
+        margin-top: 30px;
+        p {
+            text-align: center;
+            color: $second;
+            margin: 30px;
+            transition: transform .2s ease-in-out;
+            &::after {
+                @include line;
+                background-color: $second;
+                margin-top: 5px;
+            }
+            &::before {
+                @include line;
+                background-color: $second;
+                margin-bottom: 5px;
+            }
+            &:hover { 
+                text-decoration: none;
+                transform: scale(1.1);
+            }
+        }
+    }
+    img {
+        height: 30px;
+        margin: 5px 0 30px 0;
+    }
+}
+
+/* ----- QUERIES ----- */
+@media screen and (min-width: 480px) {
+    //HEADER
+    header {
+        .index {
+        background: url(/assets/img/backtwo.jpg) center/cover fixed;
+        width: 100%;
+        }
+    }
+
+    //FOOTER
+    .footer {
+        padding-bottom: 30px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        p { 
+            margin-right: 10px;
+            padding-bottom: 10px;
+        }
+        img { margin-left: 10px}
+    }
+}
+
+@media screen and (min-width: 576px ) {
+    .fullmenu {display: none;}
+    .fullmenuleft p {
+        position: absolute;
+        bottom: 15px;
+        left: 40%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.1em;
+        transition: transform .2s ease-in-out;
+        &::after {
+            @include line;
+            margin-top: 10px;
+            background-color: $second;
+        }
+        &::before {
+            @include line;
+            margin-bottom: 10px;
+            background-color: $second;
+        }
+        &:hover { transform: scale(1.1);}
+    }
+}
+
+@media screen and (min-width: 768px ) {
+    //HEADER
+    //header {
+    //    background: url(/assets/img/backthree.jpg) center/cover fixed;
+    //}
+    //HOME
+    .peter { margin-bottom: 30px; }
+    
+    .menu {
+        h1, p { text-align: left;}
+    }
+    .jumbotron { padding-top: 0;}
+    
+
+    // MENU
+    .menupage {
+        padding: 10px;
+        h2 {
+            text-align: right;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            padding-top: 30px;
+        }
+        article { 
+            width: 100%;
+            margin-top: 30px;
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                .menuitem p{ text-align: left;}
+                .price p { text-align: right;}
+                li p {
+                    line-height: 1.5em;
+                }
+            }
+        }
+    }
+    //OUR RESTAURANTS
+    .london,
+    .vancouver {
+        display: flex;
+        .description1 {}
+        .adres1 { 
+            order: -1;
+            margin-top: 30px;
+            p { 
+                text-align: left;
+                padding: 0;
+            }
+        }
+
+        .containerflex {
+            overflow: hidden;
+            display: flex;
+            margin-bottom: 30px;
+            .placeimg1, 
+            .maps1 { 
+                flex: 1;
+                height: 100%;
+                margin: auto;
+            }
+            img { display: block; }
+        }
+    }
+    .stockholm {
+        .containerflex1 {
+            overflow: hidden;
+            display: flex;
+            margin-bottom: 30px;
+            .placeimg,
+            .maps {
+                flex: 1;
+                height: 100%;
+                margin: auto;
+            }
+        }
+        .adres {
+            p {
+            text-align: right;
+            margin-top: 30px;
+            }
+        }
+        .description {
+            p { padding: 0}
+        }
+    }
+}
+    
+
+
+//MEDIA QUERIE VOOR CONTACT PAGINA
+@media screen and (min-width: 992px ) {
+    //MENU
+    .menupage {margin-bottom: 30px;}
+    //CONTACT
+    .imgnext img {
+        display: block;
+        margin: auto;
+        width: 100%; 
+        margin: 30px 0;
+    }
+}

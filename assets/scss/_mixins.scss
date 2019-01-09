@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+// TEXT TRANSFORM
+
+@mixin line (){
+    content: ' ';
+    display: block;
+    width: 50px;
+    margin: auto;
+    height: 2px;
+}
+@mixin items {
+    border: 1px solid $main;
+    margin: 5px;
+    padding: 5px;
+    margin-bottom: 30px;  
+    h2 {
+        margin-top: 30px;
+        color: $main;
+        text-align: right;
+        text-transform: uppercase;
+    }
+    p { 
+        padding: inherit;
+        color: $main;
+        text-align: right;
+    }
+    .maps { width: 100%;}
+    .adres p { 
+        text-transform: uppercase;
+        line-height: 1.5em;
+    }
+}

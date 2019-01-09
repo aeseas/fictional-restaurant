@@ -1,0 +1,572 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+/* ----- GENERAL ----- */
+body {
+  background-color: #fafafa;
+  margin: 0auto;
+  font: 400 100%/1 Oswald, Helvetica, sans-serif;
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+main h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 30px;
+  color: #191919;
+}
+main p {
+  font-size: 0.7em;
+  text-align: right;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 1em;
+  color: #191919;
+}
+
+/* ----- HEADER ----- */
+header .index {
+  height: 100vh;
+  background: url(/assets/img/backone.jpeg) center/cover fixed;
+  background-repeat: no-repeat;
+}
+header .navbar-light {
+  background-color: green;
+}
+header .navbar {
+  background-color: #191919;
+}
+header .navbar .navbar-toggler {
+  background-color: #fafafa;
+}
+header .navbar .nav-item {
+  text-align: right;
+}
+header .navbar .nav-item .nav-link {
+  color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+header .navbar .nav-item .nav-link:hover {
+  text-decoration: none;
+  color: #BDBDBD;
+}
+header .navbar-brand img {
+  height: 40px;
+  padding-top: 10px;
+}
+
+/* ----- HOMEPAGE ----- */
+.peter img {
+  width: 100%;
+  padding: 0;
+}
+
+.readmore p {
+  text-align: center;
+  color: #191919;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.readmore p::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  margin-top: 10px;
+  background-color: #191919;
+}
+.readmore p::before {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: #191919;
+}
+.readmore p:hover {
+  transform: scale(1.1);
+}
+
+.menu {
+  background-color: #191919;
+}
+.menu h1, .menu p {
+  color: #fafafa;
+}
+.menu img {
+  width: 100%;
+}
+.menu p {
+  padding-bottom: 10px;
+}
+.menu section {
+  position: relative;
+}
+
+.fullmenu p {
+  position: absolute;
+  bottom: 15px;
+  left: 40%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: transform 0.2s ease-in-out;
+}
+.fullmenu p::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  margin-top: 10px;
+  background-color: #fafafa;
+}
+.fullmenu p::before {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+.fullmenu p:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+.card .card-body {
+  text-align: right;
+}
+.card .card-body h5 {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: right;
+  color: #191919;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card:last-child {
+  margin-bottom: 30px;
+}
+
+/* ----- MENU ----- */
+.menupage {
+  padding: 10px;
+}
+.menupage h2 {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding-top: 30px;
+}
+.menupage article {
+  width: 100%;
+  margin-top: 30px;
+}
+.menupage article .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.menupage article .flex .menuitem p {
+  text-align: left;
+}
+.menupage article .flex .price p {
+  text-align: right;
+}
+.menupage article .flex li p {
+  text-transform: uppercase;
+  line-height: 3em;
+}
+.menupage .border1,
+.menupage .border2 {
+  border: 1px solid #191919;
+  padding: 5px;
+}
+.menupage img {
+  width: 100%;
+  padding: inherit;
+}
+
+/* ----- GALLERY ----- */
+.pagination {
+  margin: 5px;
+  height: 400px;
+  background-color: #191919;
+}
+
+/* ----- OUR RESTAURANTS ----- */
+.title {
+  margin-bottom: 30px;
+}
+.title ul {
+  text-align: right;
+  margin-right: 5px;
+}
+.title ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #191919;
+  font-weight: 700;
+}
+.title ul a:hover {
+  color: #BDBDBD;
+}
+
+.london,
+.vancouver {
+  border: 1px solid #191919;
+  margin: 5px;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+.london h2,
+.vancouver h2 {
+  margin-top: 30px;
+  color: #191919;
+  text-align: right;
+  text-transform: uppercase;
+}
+.london p,
+.vancouver p {
+  padding: inherit;
+  color: #191919;
+  text-align: right;
+}
+.london .maps,
+.vancouver .maps {
+  width: 100%;
+}
+.london .adres p,
+.vancouver .adres p {
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+.london .containerflex,
+.vancouver .containerflex {
+  display: none;
+}
+
+.stockholm {
+  border: 1px solid #191919;
+  margin: 5px;
+  padding: 5px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: inherit;
+}
+.stockholm h2 {
+  margin-top: 30px;
+  color: #191919;
+  text-align: right;
+  text-transform: uppercase;
+}
+.stockholm p {
+  padding: inherit;
+  color: #191919;
+  text-align: right;
+}
+.stockholm .maps {
+  width: 100%;
+}
+.stockholm .adres p {
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+.stockholm .containerflex1 {
+  display: none;
+}
+.stockholm h2 {
+  margin-top: 30px;
+  color: #191919;
+  text-align: left;
+}
+.stockholm p {
+  color: #191919;
+  text-align: left;
+}
+
+/* ----- CONTACT ----- */
+form .form-group {
+  color: #191919;
+  font-size: 0.7em;
+}
+form .btn {
+  text-transform: uppercase;
+  color: #191919;
+  font-weight: 700;
+  background-color: #fafafa;
+  border: none;
+  margin: auto;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+form .btn::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #191919;
+}
+form .btn::before {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #191919;
+}
+form .btn:hover {
+  background-color: #fafafa;
+  color: #191919;
+  border: none;
+  transform: scale(1.1);
+}
+
+.imgnext img {
+  display: none;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  background-color: #191919;
+  text-align: center;
+  color: #fafafa;
+}
+footer p {
+  font-size: 0.7em;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+footer ul a {
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 10px;
+  color: #fafafa;
+}
+footer ul a:hover {
+  color: #BDBDBD;
+}
+footer a {
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+footer a p {
+  text-align: center;
+  color: #fafafa;
+  margin: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+footer a p::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #fafafa;
+  margin-top: 5px;
+}
+footer a p::before {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #fafafa;
+  margin-bottom: 5px;
+}
+footer a p:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+footer img {
+  height: 30px;
+  margin: 5px 0 30px 0;
+}
+
+/* ----- QUERIES ----- */
+@media screen and (min-width: 480px) {
+  header .index {
+    background: url(/assets/img/backtwo.jpg) center/cover fixed;
+    width: 100%;
+  }
+
+  .footer {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer p {
+    margin-right: 10px;
+    padding-bottom: 10px;
+  }
+  .footer img {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .fullmenu {
+    display: none;
+  }
+
+  .fullmenuleft p {
+    position: absolute;
+    bottom: 15px;
+    left: 40%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: transform 0.2s ease-in-out;
+  }
+  .fullmenuleft p::after {
+    content: " ";
+    display: block;
+    width: 50px;
+    margin: auto;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #fafafa;
+  }
+  .fullmenuleft p::before {
+    content: " ";
+    display: block;
+    width: 50px;
+    margin: auto;
+    height: 2px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+  }
+  .fullmenuleft p:hover {
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .peter {
+    margin-bottom: 30px;
+  }
+
+  .menu h1, .menu p {
+    text-align: left;
+  }
+
+  .jumbotron {
+    padding-top: 0;
+  }
+
+  .menupage {
+    padding: 10px;
+  }
+  .menupage h2 {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding-top: 30px;
+  }
+  .menupage article {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .menupage article .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menupage article .flex .menuitem p {
+    text-align: left;
+  }
+  .menupage article .flex .price p {
+    text-align: right;
+  }
+  .menupage article .flex li p {
+    line-height: 1.5em;
+  }
+
+  .london,
+.vancouver {
+    display: flex;
+  }
+  .london .adres1,
+.vancouver .adres1 {
+    order: -1;
+    margin-top: 30px;
+  }
+  .london .adres1 p,
+.vancouver .adres1 p {
+    text-align: left;
+    padding: 0;
+  }
+  .london .containerflex,
+.vancouver .containerflex {
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .london .containerflex .placeimg1,
+.london .containerflex .maps1,
+.vancouver .containerflex .placeimg1,
+.vancouver .containerflex .maps1 {
+    flex: 1;
+    height: 100%;
+    margin: auto;
+  }
+  .london .containerflex img,
+.vancouver .containerflex img {
+    display: block;
+  }
+
+  .stockholm .containerflex1 {
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .stockholm .containerflex1 .placeimg,
+.stockholm .containerflex1 .maps {
+    flex: 1;
+    height: 100%;
+    margin: auto;
+  }
+  .stockholm .adres p {
+    text-align: right;
+    margin-top: 30px;
+  }
+  .stockholm .description p {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menupage {
+    margin-bottom: 30px;
+  }
+
+  .imgnext img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    margin: 30px 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
