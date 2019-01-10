@@ -34,11 +34,7 @@ main {
 
 /* ----- HEADER ----- */
 header {
-    .index {
-    height: 100vh;
-    background: url(/assets/img/backone.jpeg) center/cover fixed;
-    background-repeat: no-repeat;
-    }   
+  
     .navbar-light { background-color: green;}
     .navbar {
         background-color: $main;
@@ -68,6 +64,10 @@ header {
     width: 100%;
     padding: 0;
 }
+.jumbotron a { 
+    &:hover { text-decoration: none; 
+    }
+}
 
 .readmore p {
     text-align: center;
@@ -77,6 +77,7 @@ header {
     font-size: 1.1em;
     transition: transform .2s ease-in-out;
     cursor: pointer;
+    a { text-decoration: none;}
     &::after {
         @include line;
         margin-top: 10px;
@@ -140,7 +141,7 @@ header {
 
 /* ----- MENU ----- */
 .menupage {
-    padding: 10px;
+    padding: 10px;    
     h2 {
         text-align: right;
         text-transform: uppercase;
@@ -161,7 +162,6 @@ header {
             }
         }
     }
-
     .border1, 
     .border2 { 
         border: 1px solid $main; 
@@ -175,10 +175,21 @@ header {
 
 /* ----- GALLERY ----- */
 .pagination { 
-    margin: 5px;
-    height: 400px; 
-    background-color: $main;
-}
+    .page-link {
+        border: 1px solid $main;
+        color: $main;
+        &:hover { 
+            background-color: $main;
+            color: $second;
+            }
+        }
+    a { font-size: .7em;}
+    .active { 
+        background-color: $main; 
+        color: $second;
+        }
+    }
+
 
 /* ----- OUR RESTAURANTS ----- */
 .title {
@@ -197,13 +208,84 @@ header {
 }
 
 .london,
-.vancouver { 
+.vancouver, { 
     @include items; 
-    .containerflex { display: none;}
+    .googlemaps {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: auto;
+        font-size: 1.3em;
+        padding-top: 15px;
+        transition: transform .2s ease-in-out;
+        &::after {
+            @include line;
+            background-color: $main;
+        }
+        &::before {
+            @include line;
+            background-color: $main;
+        }
+        &:hover { 
+            background-color: $second;
+            color: $main;
+            border: none;
+            transform: scale(1.1);
+        }
+        p { text-align: center;}
+    }
+    .description1 p {padding: 0;}
+    .googlemaps { display: block; }
+    .adres1 { display: none;}
+    .maps { display: none; }
+    .flex {
+        display: flex;
+        justify-content: center;
+        ul {
+            margin-top: 40px;
+            margin-right: 20px;
+            padding-right: 20px;
+            border-right: 1px solid $main;
+            .day p { text-align: right; }
+            .hour p { text-align: left; }
+            &:last-child { border: none; }
+            li p {
+                text-transform: uppercase;
+                line-height: 1em;
+            }
+        }
+    }
 }
 
 .stockholm {
+    .adres { display: none;}
+    .description p {padding: 0;}
     @include items;
+    .maps { display: none; }
+    .googlemaps {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: auto;
+        font-size: 1em;
+        padding-top: 15px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: transform .2s ease-in-out;
+        &::after {
+            @include line;
+            background-color: $main;
+        }
+        &::before {
+            @include line;
+            background-color: $main;
+        }
+        &:hover { 
+            background-color: $second;
+            color: $main;
+            border: none;
+            transform: scale(1.1);
+        }
+        p { text-align: center;}
+    }
     border: none;
     background-color: inherit;
     .containerflex1 { display: none;}
@@ -215,6 +297,27 @@ header {
     p { 
         color: $main;
         text-align: left;
+        text-transform: none ;
+    }
+    .flex {
+        display: flex;
+        justify-content: center;
+        ul {
+            margin-top: 40px;
+            margin-right: 20px;
+            padding-right: 20px;
+            border-right: 1px solid $main;
+            
+            .day p{ 
+                text-align: right; 
+            }
+            .hour p { text-align: left; }
+            &:last-child { border: none; }
+            li p {
+                text-transform: uppercase;
+                line-height: 1em;
+            }
+        }
     }
 }
 
@@ -304,12 +407,7 @@ footer {
 /* ----- QUERIES ----- */
 @media screen and (min-width: 480px) {
     //HEADER
-    header {
-        .index {
-        background: url(/assets/img/backtwo.jpg) center/cover fixed;
-        width: 100%;
-        }
-    }
+
 
     //FOOTER
     .footer {
@@ -348,13 +446,17 @@ footer {
         }
         &:hover { transform: scale(1.1);}
     }
+    .vancouver,
+    .london,
+    .stockholm { 
+        
+        .googlemaps { margin: auto; }
+    }
 }
 
 @media screen and (min-width: 768px ) {
     //HEADER
-    //header {
-    //    background: url(/assets/img/backthree.jpg) center/cover fixed;
-    //}
+
     //HOME
     .peter { margin-bottom: 30px; }
     
@@ -387,12 +489,16 @@ footer {
             }
         }
     }
+
     //OUR RESTAURANTS
     .london,
-    .vancouver {
+    .vancouver, {
         display: flex;
-        .description1 {}
+        .description1 {
+            p { padding: 0;}
+        }
         .adres1 { 
+            display: block;
             order: -1;
             margin-top: 30px;
             p { 
@@ -401,28 +507,35 @@ footer {
             }
         }
         .containerflex {
+            .googlemaps { display: none; }
+            max-height: 407px;
             display: block;
-            .row-eq-height {
+            margin-bottom: 30px;
+            .maps { 
+                display: block;
+                width: 100%;
+                height: 300px;
             }
         }
-        
     }
     .stockholm {
-        .containerflex1 {
-            overflow: hidden;
-            display: flex;
+        .containerflex {
+            max-height: 407px;
+            display: block;
             margin-bottom: 30px;
-            .placeimg,
-            .maps {
-                flex: 1;
-                height: 100%;
-                margin: auto;
+            .maps { 
+                display: block;
+                width: 100%;
+                height: 300px;
             }
+            .googlemaps { display: none; }
         }
         .adres {
+            display: block;
             p {
             text-align: right;
             margin-top: 30px;
+            text-transform: none;
             }
         }
         .description {
@@ -430,18 +543,19 @@ footer {
         }
     }
 }
-    
-
 
 //MEDIA QUERIE VOOR CONTACT PAGINA
 @media screen and (min-width: 992px ) {
     //MENU
-    .menupage {margin-bottom: 30px;}
+    .menupage { margin-bottom: 30px; }
+
     //CONTACT
     .imgnext img {
         display: block;
         margin: auto;
-        width: 100%; 
+        width: 90%; 
         margin: 30px 0;
     }
+
+    //CONTACT
 }

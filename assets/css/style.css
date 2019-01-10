@@ -29,11 +29,6 @@ main p {
 }
 
 /* ----- HEADER ----- */
-header .index {
-  height: 100vh;
-  background: url(/assets/img/backone.jpeg) center/cover fixed;
-  background-repeat: no-repeat;
-}
 header .navbar-light {
   background-color: green;
 }
@@ -67,6 +62,10 @@ header .navbar-brand img {
   padding: 0;
 }
 
+.jumbotron a:hover {
+  text-decoration: none;
+}
+
 .readmore p {
   text-align: center;
   color: #191919;
@@ -75,6 +74,9 @@ header .navbar-brand img {
   font-size: 1.1em;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
+}
+.readmore p a {
+  text-decoration: none;
 }
 .readmore p::after {
   content: " ";
@@ -207,10 +209,20 @@ header .navbar-brand img {
 }
 
 /* ----- GALLERY ----- */
-.pagination {
-  margin: 5px;
-  height: 400px;
+.pagination .page-link {
+  border: 1px solid #191919;
+  color: #191919;
+}
+.pagination .page-link:hover {
   background-color: #191919;
+  color: #fafafa;
+}
+.pagination a {
+  font-size: 0.7em;
+}
+.pagination .active {
+  background-color: #191919;
+  color: #fafafa;
 }
 
 /* ----- OUR RESTAURANTS ----- */
@@ -260,9 +272,88 @@ header .navbar-brand img {
   text-transform: uppercase;
   line-height: 1.5em;
 }
-.london .containerflex,
-.vancouver .containerflex {
+.london .googlemaps,
+.vancouver .googlemaps {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: auto;
+  font-size: 1.3em;
+  padding-top: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+.london .googlemaps::after,
+.vancouver .googlemaps::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #191919;
+}
+.london .googlemaps::before,
+.vancouver .googlemaps::before {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #191919;
+}
+.london .googlemaps:hover,
+.vancouver .googlemaps:hover {
+  background-color: #fafafa;
+  color: #191919;
+  border: none;
+  transform: scale(1.1);
+}
+.london .googlemaps p,
+.vancouver .googlemaps p {
+  text-align: center;
+}
+.london .description1 p,
+.vancouver .description1 p {
+  padding: 0;
+}
+.london .googlemaps,
+.vancouver .googlemaps {
+  display: block;
+}
+.london .adres1,
+.vancouver .adres1 {
   display: none;
+}
+.london .maps,
+.vancouver .maps {
+  display: none;
+}
+.london .flex,
+.vancouver .flex {
+  display: flex;
+  justify-content: center;
+}
+.london .flex ul,
+.vancouver .flex ul {
+  margin-top: 40px;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #191919;
+}
+.london .flex ul .day p,
+.vancouver .flex ul .day p {
+  text-align: right;
+}
+.london .flex ul .hour p,
+.vancouver .flex ul .hour p {
+  text-align: left;
+}
+.london .flex ul:last-child,
+.vancouver .flex ul:last-child {
+  border: none;
+}
+.london .flex ul li p,
+.vancouver .flex ul li p {
+  text-transform: uppercase;
+  line-height: 1em;
 }
 
 .stockholm {
@@ -272,6 +363,12 @@ header .navbar-brand img {
   margin-bottom: 30px;
   border: none;
   background-color: inherit;
+}
+.stockholm .adres {
+  display: none;
+}
+.stockholm .description p {
+  padding: 0;
 }
 .stockholm h2 {
   margin-top: 30px;
@@ -291,6 +388,44 @@ header .navbar-brand img {
   text-transform: uppercase;
   line-height: 1.5em;
 }
+.stockholm .maps {
+  display: none;
+}
+.stockholm .googlemaps {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: auto;
+  font-size: 1em;
+  padding-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+.stockholm .googlemaps::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #191919;
+}
+.stockholm .googlemaps::before {
+  content: " ";
+  display: block;
+  width: 50px;
+  margin: auto;
+  height: 2px;
+  background-color: #191919;
+}
+.stockholm .googlemaps:hover {
+  background-color: #fafafa;
+  color: #191919;
+  border: none;
+  transform: scale(1.1);
+}
+.stockholm .googlemaps p {
+  text-align: center;
+}
 .stockholm .containerflex1 {
   display: none;
 }
@@ -302,6 +437,30 @@ header .navbar-brand img {
 .stockholm p {
   color: #191919;
   text-align: left;
+  text-transform: none;
+}
+.stockholm .flex {
+  display: flex;
+  justify-content: center;
+}
+.stockholm .flex ul {
+  margin-top: 40px;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #191919;
+}
+.stockholm .flex ul .day p {
+  text-align: right;
+}
+.stockholm .flex ul .hour p {
+  text-align: left;
+}
+.stockholm .flex ul:last-child {
+  border: none;
+}
+.stockholm .flex ul li p {
+  text-transform: uppercase;
+  line-height: 1em;
 }
 
 /* ----- CONTACT ----- */
@@ -408,11 +567,6 @@ footer img {
 
 /* ----- QUERIES ----- */
 @media screen and (min-width: 480px) {
-  header .index {
-    background: url(/assets/img/backtwo.jpg) center/cover fixed;
-    width: 100%;
-  }
-
   .footer {
     padding-bottom: 30px;
     display: flex;
@@ -463,6 +617,12 @@ footer img {
   .fullmenuleft p:hover {
     transform: scale(1.1);
   }
+
+  .vancouver .googlemaps,
+.london .googlemaps,
+.stockholm .googlemaps {
+    margin: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .peter {
@@ -508,8 +668,13 @@ footer img {
 .vancouver {
     display: flex;
   }
+  .london .description1 p,
+.vancouver .description1 p {
+    padding: 0;
+  }
   .london .adres1,
 .vancouver .adres1 {
+    display: block;
     order: -1;
     margin-top: 30px;
   }
@@ -520,22 +685,41 @@ footer img {
   }
   .london .containerflex,
 .vancouver .containerflex {
+    max-height: 407px;
     display: block;
-  }
-  .stockholm .containerflex1 {
-    overflow: hidden;
-    display: flex;
     margin-bottom: 30px;
   }
-  .stockholm .containerflex1 .placeimg,
-.stockholm .containerflex1 .maps {
-    flex: 1;
-    height: 100%;
-    margin: auto;
+  .london .containerflex .googlemaps,
+.vancouver .containerflex .googlemaps {
+    display: none;
+  }
+  .london .containerflex .maps,
+.vancouver .containerflex .maps {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+
+  .stockholm .containerflex {
+    max-height: 407px;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .stockholm .containerflex .maps {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  .stockholm .containerflex .googlemaps {
+    display: none;
+  }
+  .stockholm .adres {
+    display: block;
   }
   .stockholm .adres p {
     text-align: right;
     margin-top: 30px;
+    text-transform: none;
   }
   .stockholm .description p {
     padding: 0;
@@ -549,7 +733,7 @@ footer img {
   .imgnext img {
     display: block;
     margin: auto;
-    width: 100%;
+    width: 90%;
     margin: 30px 0;
   }
 }
