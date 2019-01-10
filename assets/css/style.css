@@ -529,8 +529,12 @@ footer ul a:hover {
   color: #BDBDBD;
 }
 footer a {
+  text-decoration: none;
   text-transform: uppercase;
   margin-top: 30px;
+}
+footer a:hover {
+  text-decoration: none;
 }
 footer a p {
   text-align: center;
@@ -557,7 +561,6 @@ footer a p::before {
   margin-bottom: 5px;
 }
 footer a p:hover {
-  text-decoration: none;
   transform: scale(1.1);
 }
 footer img {
