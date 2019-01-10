@@ -69,6 +69,8 @@ header {
     }
 }
 
+.gone { display: none; }
+
 .readmore p {
     text-align: center;
     color: $main;
@@ -265,7 +267,7 @@ header {
         text-transform: uppercase;
         font-weight: 700;
         margin: auto;
-        font-size: 1em;
+        font-size: 1.3em;
         padding-top: 15px;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -424,6 +426,7 @@ footer {
 }
 
 @media screen and (min-width: 576px ) {
+    //MENU
     .fullmenu {display: none;}
     .fullmenuleft p {
         position: absolute;
@@ -455,8 +458,6 @@ footer {
 }
 
 @media screen and (min-width: 768px ) {
-    //HEADER
-
     //HOME
     .peter { margin-bottom: 30px; }
     
@@ -546,6 +547,9 @@ footer {
 
 //MEDIA QUERIE VOOR CONTACT PAGINA
 @media screen and (min-width: 992px ) {
+    //HOME
+    .gone {display: block; }
+    .readmore { display: none; }
     //MENU
     .menupage { margin-bottom: 30px; }
 

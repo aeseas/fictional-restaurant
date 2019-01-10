@@ -66,6 +66,10 @@ header .navbar-brand img {
   text-decoration: none;
 }
 
+.gone {
+  display: none;
+}
+
 .readmore p {
   text-align: center;
   color: #191919;
@@ -395,7 +399,7 @@ header .navbar-brand img {
   text-transform: uppercase;
   font-weight: 700;
   margin: auto;
-  font-size: 1em;
+  font-size: 1.3em;
   padding-top: 15px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -729,6 +733,14 @@ footer img {
   }
 }
 @media screen and (min-width: 992px) {
+  .gone {
+    display: block;
+  }
+
+  .readmore {
+    display: none;
+  }
+
   .menupage {
     margin-bottom: 30px;
   }
