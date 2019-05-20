@@ -10,11 +10,11 @@ Made with:
 - JavaScript
 - prepros
 
-[Link to page](https://aeseas.github.io/restaurant-css-framework/)
+[Link to page](https://aeseas.github.io/fictional-restaurant/)
 
 Might need some changes.
 
 ## Install | Clone
-    $ git clone https://github.com/aeseas/restaurant-css-framework.git
+    $ git clone https://github.com/aeseas/fictional-restaurant.git
     $ cd becode-node-socketio
     $ npm install
