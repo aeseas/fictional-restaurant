@@ -2,6 +2,8 @@
 assignment at BeCode.org, html, css <br>
 name BeCode assignment: `restaurant-css-framework`<br>
 
+A fictional website made as an exercise. Logo from [this](https://www.quay.com.au/) site, images from all over the internet.
+
 Made with:
 - HTML
 - SCSS
