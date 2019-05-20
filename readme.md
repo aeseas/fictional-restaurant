@@ -10,9 +10,9 @@ Made with:
 - JavaScript
 - prepros
 
-Might need some changes.
-
 [Link to page](https://aeseas.github.io/restaurant-css-framework/)
+
+Might need some changes.
 
 ## Install | Clone
     $ git clone https://github.com/aeseas/restaurant-css-framework.git
